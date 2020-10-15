@@ -34,36 +34,33 @@ public abstract class CanBo {
 		this.GioiTinh = gioiTinh;
 	}
 	
-	public abstract void nhap();
-	public abstract void xuat();
+	public void nhap() {
+		System.out.println("\t Nhập họ tên : ");
+		Helper.scan.nextLine();
+		HoTen = Helper.scan.nextLine();
+		if(HoTen.length() == 0) {
+			System.out.println("Tên không được để trống");
+			return;
+		}
+		
+		System.out.println("\t Nhập tuổi : ");
+		try {
+			Tuoi = Integer.parseInt(Helper.scan.nextLine());
+		}catch(NumberFormatException ex){
+			System.out.println("Lỗi: thứ mà bạn vừa nhập không phải là số");
+		}catch(Exception ex) {
+			System.out.println("Lỗi: " + ex.getMessage());
+		}
+		if(Tuoi < 18 || Tuoi > 55) {
+			System.out.println("Tuổi không hợp lệ");
+			return;	
+		}
+
+		System.out.println("\t Nhập giới tính: ");
+		GioiTinh = Helper.scan.nextLine();
+		if(GioiTinh.compareTo("nam") != 0 && GioiTinh.compareTo("nữ") != 0) {
+			GioiTinh = "Khác";
+		}
+	}
 	
-//	public void nhap() {
-//		
-//		System.out.println("\t Nhập họ tên cán bộ: ");
-//		Helper.scan.nextLine();
-//		HoTen = Helper.scan.nextLine();
-////		if(HoTen.length() == 0) {
-////			System.out.print("Tên không được để trống");
-////			return;
-////		}
-//		System.out.println("\t Nhập tuổi cán bộ: ");
-//		
-//		Tuoi = Integer.parseInt(Helper.scan.nextLine());
-////		if(Tuoi < 18 || Tuoi > 55) {
-////			System.out.print("Tuổi không hợp lệ");
-////			return;
-////		}
-//		
-//		System.out.println("\t Nhập giới tính cán bộ: ");
-////		Helper.scan.nextLine();
-//		GioiTinh = Helper.scan.nextLine();
-////		if(GioiTinh.compareTo("nam") != 0 && GioiTinh.compareTo("nữ") != 0) {
-////			GioiTinh = "Khác";
-////		}
-//
-//	}
-	
-//	public void xuat() {
-//		System.out.printf("%-10s%-8d%-8s" , HoTen, Tuoi, GioiTinh);
-//	}
 }

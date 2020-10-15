@@ -54,6 +54,7 @@ public class QuanLyCanBo {
 				switch(chon) {
 				case 1:
 					CongNhan cn = new CongNhan();
+					int a = cn.Bac;
 					cn.nhap();
 					if(cn.getHoTen() == null || cn.getBac() == 0 || cn.getTuoi() == 0 || cn.getGioiTinh() == null) return;
 					listCongNhan.add(cn);

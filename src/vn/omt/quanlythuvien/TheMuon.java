@@ -8,12 +8,12 @@ public class TheMuon {
 	String soHieuSach;
 
 	public TheMuon() {
-		super();
+		super();//AnhTT: Tại sao cần gọi super() ở đây
 		// TODO Auto-generated constructor stub
 	}
 
 	public TheMuon(SinhVien sinhVien, String maThe, int ngayMuon, int hanTra, String soHieuSach) {
-		super();
+		super();//AnhTT: Tại sao cần có constructor này? Vì không thấy constructor này được sử dụng ở đâu trong chương trình
 		this.sinhVien = sinhVien;
 		this.maThe = maThe;
 		this.ngayMuon = ngayMuon;

@@ -6,6 +6,7 @@ public class SinhVien {
 	int tuoi;
 	String lop;
 	public SinhVien() {
+		//AnhTT: Tại sao cần gọi super() ở đây?
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -35,6 +36,8 @@ public class SinhVien {
 	}
 	
 	public void nhapSv() {
+		//AnhTT
+		//Chương trình sẽ chạy lại từ đầu khi nhập họ tên trống, hoặc nhập một thông tin nào đó không đúng
 		System.out.println("\t Nhập vào tên sinh viên: ");
 		hoTen = Helper.scan.nextLine();
 		if (hoTen.length() == 0) {

@@ -10,9 +10,9 @@ public class QuanLyThuVien {
 		// TODO Auto-generated method stub
 		do {
 			System.out.println("=================QUẢN LÝ THƯ VIỆN==================");
-			System.out.println("1. Thêm thẻ: ");
+			System.out.println("1. Thêm : ");
 			System.out.println("2. Xóa thẻ: ");
-			System.out.println("3. Hiển thị thẻ: ");
+			System.out.println("3. Hiển thị sinh viên: ");
 			System.out.println("4. Đóng: ");
 			int chon = Integer.parseInt(Helper.scan.nextLine());
 			switch(chon) {
@@ -37,9 +37,11 @@ public class QuanLyThuVien {
 	private static void themThe() {
 		// TODO Auto-generated method stub
 		TheMuon theMuon = new TheMuon();
+//		theMuon.getSinhVien().nhapSv();
 		theMuon.nhapThe();
 		if(theMuon.getSinhVien().getHoTen() == null || theMuon.getSinhVien().getLop() == null 
-				|| theMuon.getSinhVien().getTuoi() == 0 || theMuon.getMaThe() == null || theMuon.getSoHieuSach() == null) return;
+				|| theMuon.getSinhVien().getTuoi() == 0 || theMuon.getMaThe() == null || theMuon.getNgayMuon() == 0 || theMuon.getHanTra() == 0) return;
+		
 		list.add(theMuon);
 		System.out.println("Thêm thành công!!");
 		System.out.println();

@@ -48,9 +48,10 @@ public class SinhVien {
 		}catch(NumberFormatException ex){
 			System.out.println("Lỗi: Bạn nhập không hợp lệ!!");
 			setTuoi(0);
+			return;
 		}catch(Exception ex){
 			System.out.println("Lỗi: " + ex.getMessage());
-			return;
+			
 		}
 		if (tuoi < 18) {
 			System.out.println("Tuổi không hợp lệ");

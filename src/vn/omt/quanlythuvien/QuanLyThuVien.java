@@ -49,6 +49,10 @@ public class QuanLyThuVien {
 
 	private static void xoaThe() {
 		// TODO Auto-generated method stub
+		//AnhTT:
+		//Tại sao lại đặt phần nhập mã phiếu mượn cần xóa vào trong vòng for?
+		//Đã thử tính năng xóa thẻ khi danh sách có nhiều thẻ mượn chưa?
+
 		for(int i=0;i<list.size();i++) {
 			TheMuon theMuon = list.get(i);
 			System.out.println("Nhập mã phiếu mượn cần xóa: ");

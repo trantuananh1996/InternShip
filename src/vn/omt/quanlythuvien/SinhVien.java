@@ -6,7 +6,7 @@ public class SinhVien {
 	int tuoi;
 	String lop;
 	public SinhVien() {
-		super();
+		super();//AnhTT: Tại sao cần super() ở đây, và các chỗ super() khác nữa?
 		// TODO Auto-generated constructor stub
 	}
 	public SinhVien(String hoTen, int tuoi, String lop) {
@@ -35,6 +35,8 @@ public class SinhVien {
 	}
 	
 	public void nhapSv() {
+		//AnhTT
+		//Điều gì xảy ra khi nhập tên sinh viên trống?
 		System.out.println("\t Nhập vào tên sinh viên: ");
 		hoTen = Helper.scan.nextLine();
 		if (hoTen.length() == 0) {
